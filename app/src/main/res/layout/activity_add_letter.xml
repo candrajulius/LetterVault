@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.add.AddLetterActivity">
+
+
+
+    <Spinner
+        android:id="@+id/add_spinner_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/day"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/add_start_time"
+            style="@style/Base.Widget.AppCompat.ImageButton"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="start_time"
+            android:onClick="showStartTimePicker"
+            android:src="@drawable/ic_access_time" />
+
+        <TextView
+            android:id="@+id/text_start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_toEndOf="@id/add_start_time"
+            android:gravity="center_vertical"
+            android:text="start_time" />
+
+        <TextView
+            android:id="@+id/add_text_start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_start_time"
+            android:layout_toEndOf="@id/add_start_time"
+            android:gravity="center_vertical"
+            tools:text="start_time" />
+
+        <ImageButton
+            android:id="@+id/add_end_time"
+            style="@style/Base.Widget.AppCompat.ImageButton"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_toEndOf="@id/text_start_time"
+            android:contentDescription="end_time"
+            android:onClick="showEndTimePicker"
+            android:src="@drawable/ic_access_time" />
+
+        <TextView
+            android:id="@+id/text_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_toEndOf="@id/add_end_time"
+            android:gravity="center_vertical"
+            android:text="end_time" />
+
+        <TextView
+            android:id="@+id/add_text_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_end_time"
+            android:layout_toEndOf="@id/add_end_time"
+            android:gravity="center_vertical"
+            tools:text="end_time" />
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edit_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="subject" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edit_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:lines="4" />
+
+
+</LinearLayout>
